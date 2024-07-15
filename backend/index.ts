@@ -31,6 +31,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
 app.use("/api/crypto", stocksRouter)
+app.use("/", function(req, res, next) {
+    return res.status(200).send({ "message" : "Hello" })
+})
 
 
 app.use(express.static(path.join(__dirname, "../../client/build")))

@@ -74,7 +74,7 @@ const Table: React.FC = () => {
               className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full shadow-lg transform hover:scale-105 transition-transform"
               onClick={() => setModalIsOpen(true)}
             >
-              Change Pairs
+              Change Coins
             </button>
             {loading && <p className="text-xl">Loading...</p>}
             {error && <p className="text-xl text-red-500">Error: {error}</p>}
@@ -111,7 +111,7 @@ const Table: React.FC = () => {
             className="bg-gray-800 rounded-lg p-6 space-y-4 shadow-lg"
             onClick={(e) => e.stopPropagation()}
           >
-            <h2 className="text-2xl font-bold text-white">Change Pair</h2>
+            <h2 className="text-2xl font-bold text-white">Change Coin</h2>
             <select
               className="w-full py-2 px-4 bg-gray-700 text-white rounded-lg outline-none"
               onChange={handleSymbolChange}
