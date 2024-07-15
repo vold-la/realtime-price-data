@@ -1,4 +1,4 @@
-import mongoose, { Document, Schema } from 'mongoose';
+import mongoose, { Document, Schema, Model } from 'mongoose';
 
 export interface IPrice extends Document {
   symbol: string;
@@ -12,4 +12,10 @@ const PriceSchema: Schema = new Schema({
   timestamp: { type: Date, default: Date.now }
 });
 
-export default mongoose.model<IPrice>('Price', PriceSchema);
+
+export interface IPriceModel extends Model<IPrice> {}
+
+export const Price: IPriceModel =
+  mongoose.models.Price || mongoose.model<IPrice>('Price', PriceSchema);
+
+export default Price;
