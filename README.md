@@ -16,11 +16,6 @@ Frontend:
 - The table should be dynamic and should be updating its values in real-time according to new data.
 - Include a button to a modal/popup that allows you to change the stock or crypto.
 
-Using Next.js (or Express), Typescript, and Redux is mandatory. For Redux, put all state in localStorage, avoid use of useState(), and utilize actions and selectors when necessary.
-
-
-As your submission, submit a Github repo link that can be tested locally. Include a README that details how to install and run the repo. Please make sure that the repo is public.
-
 ## Demonstration
 
 https://drive.google.com/file/d/1Sx21SFut3es8iEPAs-4vQ10fmyiRcflE/view?usp=drive_link
@@ -34,6 +29,9 @@ Make sure you have the following installed on your machine:
 - Node.js (>= 14.x)
 - npm (>= 6.x)
 
+Note : If you don't have the require setup,
+you can follow docker setup given at the end of this file
+
 
 ### Installation
 
@@ -44,6 +42,7 @@ Make sure you have the following installed on your machine:
    ```
 
 2. Install the dependencies in respective folders (backend & frontend):
+   
    cd backend
    ```sh
    npm install
@@ -84,14 +83,36 @@ The project should now be running at `http://localhost:4005`.
    npm run start
    ```
 
-   OR RUN LOCALLY
-   
+   OR run locally
+
    ```sh
    npm run dev
    ```
 
-
 The project should now be running at `http://localhost:3000`.
+
+## Docker setup
+ 
+ 1. cd into respective folders
+ 2. Build the image
+ ```sh
+docker build -t <your-app-name> .
+ ```
+3. Run the Image
+
+For backend
+
+```sh
+docker run -p 4005:4005 <your-app-name> -d
+ ```
+
+For frontend 
+
+```sh
+docker run -p 3000:3000 <your-app-name> -d
+ ```
+
+
 
 ## Contact
 
