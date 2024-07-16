@@ -17,4 +17,4 @@ const PriceSchema = new mongoose.Schema({
     timestamps: true
 })
 
-export default mongoose.model('prices',PriceSchema)
+export default mongoose.models.prices || mongoose.model('prices',PriceSchema)
