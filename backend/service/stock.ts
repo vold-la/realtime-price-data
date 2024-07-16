@@ -1,7 +1,7 @@
 import Price from '../models/Price';
 import axios from 'axios'
 import dotenv from "dotenv"
-import { io } from '..';
+import { io } from '../server';
 
 dotenv.config();
 
